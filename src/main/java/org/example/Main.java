@@ -150,6 +150,10 @@ public class Main {
         }else {
             System.out.println("You are not an adult");
         }
+        //Methods
+        char[] letters={'A','A','B','C','C','O','T','F'};
+        int occur=countOccurrences(letters, 'A');
+        System.out.println(occur);
     }
     //Using reference type to demonstrate
     static class Person{
@@ -157,5 +161,18 @@ public class Main {
         Person(String name){
             this.name=name;
         }
+    }
+    public static int countOccurrences(char[] letters,char searchLetter){
+        System.out.println("method countOccurences was invoked");
+        System.out.println(Arrays.toString(letters));
+        System.out.println(searchLetter);
+
+        int count=0;
+        for(char letter :letters){
+            if (letter==searchLetter){
+                count++;
+            }
+        }
+        return count;
     }
 }
