@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -104,6 +105,51 @@ public class Main {
         System.out.println(numbers.length);
         int first=numbers[0];
         System.out.println(first);
+        //Loops
+        int value=0;
+        value++;
+        value--;
+        value+=32;
+        value-=87;
+        System.out.println(value);
+        //Enhance for loop
+        for (int num : numbers){
+            System.out.println(num);
+        }
+        Arrays.stream(numbers).forEach(System.out::println);
+        //break and continue
+        String[] names={"ndeta", "voma", "inno","cilia","sime"};
+        for (String n : names) {
+            if (n.equals("inno")){
+                break;
+            }
+            System.out.println(n);
+            System.out.println("after");
+            if (n.startsWith("i")){
+                continue;
+            }
+            System.out.println(n);
+        }
+        //While loop
+        int count=10;
+        while (true && count>0){
+            System.out.println("wow");
+            count--;
+        }
+        //Scanner
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("What is your name");
+        String userName= scanner.nextLine();
+        System.out.println("Hello " +userName);
+        System.out.println("How old are you?");
+        int scanAge=scanner.nextInt();
+       int year= LocalDate.now().minusYears(scanAge).getYear();
+        System.out.println("You where born in "+ year);
+        if(scanAge>adultAge){
+            System.out.println("You are an adult");
+        }else {
+            System.out.println("You are not an adult");
+        }
     }
     //Using reference type to demonstrate
     static class Person{
