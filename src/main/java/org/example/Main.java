@@ -1,5 +1,9 @@
 package org.example;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -30,7 +34,20 @@ public class Main {
         System.out.println("after changing alex");
         alex.name="Alexandre";
         System.out.println(alex.name + " " + mariam.name);
-
+//Packages and import keywords
+        Date date=new Date();
+        LocalDate localDate=LocalDate.now();
+        LocalDateTime localDateTime=LocalDateTime.now();
+//Math class
+        System.out.println(Math.abs(-1002));
+        System.out.println(Math.max(3.4,9.9));
+        System.out.println(Math.min(3.4,9.9));
+        System.out.println(Math.pow(5.0,2.0));
+        //Comparison operators
+        int myage=23;
+        int moumeniage=22;
+        boolean ismyageolderthanmoumeniage=myage>moumeniage;
+        System.out.println(ismyageolderthanmoumeniage);
     }
     //Using reference type to demonstrate
     static class Person{
