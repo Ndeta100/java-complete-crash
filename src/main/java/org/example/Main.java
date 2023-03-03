@@ -2,6 +2,7 @@ package org.example;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Main {
@@ -90,6 +91,19 @@ public class Main {
             default:
                 System.out.println("I don't have a gender");
         }
+        //Arrays
+        int zero=0;
+        int one=1;
+        int [] numbers=new int[3];
+        numbers[0]=23;
+        numbers[2]=33;
+        numbers[1]=55;
+        System.out.println(Arrays.toString(numbers));
+        boolean [] booleans=new boolean[33];
+        System.out.println(Arrays.toString(booleans));
+        System.out.println(numbers.length);
+        int first=numbers[0];
+        System.out.println(first);
     }
     //Using reference type to demonstrate
     static class Person{
