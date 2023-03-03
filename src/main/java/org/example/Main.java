@@ -53,12 +53,42 @@ public class Main {
         System.out.println(isAdult && isStudent );
         System.out.println(isAdult || isStudent );
         //If statements
-        int age=12;
+        int age=17;
         int adultAge=18;
         if (age>=adultAge){
             System.out.println("You are an adults wow");
-        }else {
+        } else if (age>=16 &&age<adultAge) {
+            System.out.println(" I am almost an adult");
+        } else {
             System.out.println("Nice being a teen");
+        }
+        //Ternary operator
+        String message=age>=adultAge? "Hooray... I am an adult": "I am not an adult";
+        System.out.println(message +" Message ");
+        //Switch statements
+        String gender="female";
+        if (gender.equals("female")){
+
+        } else if (gender.equals("male")) {
+
+        } else if (gender.equals("prefer not to say")) {
+
+        }else {
+
+        }
+        //Using a switch statement
+        switch (gender){
+            case "female":
+                System.out.println("I am a female");
+                break;
+            case "male":
+                System.out.println(" I am a male");
+                break;
+            case "prefer not to say":
+                System.out.println("prefer not to say");
+                break;
+            default:
+                System.out.println("I don't have a gender");
         }
     }
     //Using reference type to demonstrate
