@@ -48,6 +48,18 @@ public class Main {
         int moumeniage=22;
         boolean ismyageolderthanmoumeniage=myage>moumeniage;
         System.out.println(ismyageolderthanmoumeniage);
+        boolean isAdult=true;
+        boolean isStudent=false;
+        System.out.println(isAdult && isStudent );
+        System.out.println(isAdult || isStudent );
+        //If statements
+        int age=12;
+        int adultAge=18;
+        if (age>=adultAge){
+            System.out.println("You are an adults wow");
+        }else {
+            System.out.println("Nice being a teen");
+        }
     }
     //Using reference type to demonstrate
     static class Person{
