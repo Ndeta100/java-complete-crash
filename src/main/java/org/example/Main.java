@@ -154,6 +154,47 @@ public class Main {
         char[] letters={'A','A','B','C','C','O','T','F'};
         int occur=countOccurrences(letters, 'A');
         System.out.println(occur);
+        //Classes and objects
+        Lens lensOne=new Lens("sony","1.2cm",true);
+        Lens lensTwo=new Lens("kanon","1.254cm",false);
+        Lens lensThree=new Lens("samsung","3.4cm",true);
+        System.out.println("lens 1");
+        System.out.println(lensOne.brand);
+        System.out.println(lensOne.focalLength);
+        System.out.println(lensOne.isPrime);
+        System.out.println();
+        System.out.println("lens 2");
+        System.out.println(lensTwo.brand);
+        System.out.println(lensTwo.focalLength);
+        System.out.println(lensTwo.isPrime);
+        System.out.println();
+        System.out.println("lens 3");
+        System.out.println(lensThree.brand);
+        System.out.println(lensThree.focalLength);
+        System.out.println(lensThree.isPrime);
+        //Passport
+        Passport ukPassport=new Passport("2133442",localDate.of(2025,1,4));
+
+    }
+    //Class
+    static class Lens{
+        String brand;
+        String focalLength;
+        boolean isPrime;
+        Lens(String brand, String focalLength, boolean isPrime){
+            this.brand=brand;
+            this.focalLength=focalLength;
+            this.isPrime=isPrime;
+        }
+    }
+    //Modeling a passport
+    static  class Passport{
+        String number;
+        LocalDate expiryDate;
+        Passport(String number, LocalDate expiryDate){
+            this.number=number;
+            this.expiryDate=expiryDate;
+        }
     }
     //Using reference type to demonstrate
     static class Person{
