@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -134,6 +135,20 @@ public class Main {
         while (true && count>0){
             System.out.println("wow");
             count--;
+        }
+        //Scanner
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("What is your name");
+        String userName= scanner.nextLine();
+        System.out.println("Hello " +userName);
+        System.out.println("How old are you?");
+        int scanAge=scanner.nextInt();
+       int year= LocalDate.now().minusYears(scanAge).getYear();
+        System.out.println("You where born in "+ year);
+        if(scanAge>adultAge){
+            System.out.println("You are an adult");
+        }else {
+            System.out.println("You are not an adult");
         }
     }
     //Using reference type to demonstrate
